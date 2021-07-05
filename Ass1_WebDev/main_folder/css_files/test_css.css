@@ -10,15 +10,55 @@
     color: #0099FF;
 }
 
-#purple-id {
+.body-test {
+    color: rgb(102, 255, 0)
+}
+
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navbar {
+    margin-bottom: 50px;
+    border-radius: 0;
+}
+
+/* Remove the jumbotron's default bottom margin */
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+#div-purple-id {
     color: #9F00FF;
 }
 
-#orange-text {
+#div-orange-id {
     color: #FF5400;
 }
 
-#blue-text {
+#div--text-id {
     color: #0099FF;
 }
-
