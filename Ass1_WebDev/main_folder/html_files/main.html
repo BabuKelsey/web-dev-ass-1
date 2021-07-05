@@ -5,24 +5,19 @@
     <title>Web dev assignment 1</title>
 
     <link href="..\css_files\css_ids.css" rel="stylesheet" type="text/css">
-    <link href="..\js_files\js_scripts.js" rel="script" type="js">
+    <!--<link href="..\js_files\js_scripts.js" rel="script" type="js">-->
 
-    <script>
-        function dark_mode_toggle() {
-            var element = document.body;
-            element.classList.toggle("light-mode");
-        }
-    </script>
+    <script type="text/javascript" src="..\js_files\js_script.js"></script>
 
-    <body id="site-theme">
+    <body>
         <div>
+            <button onclick="dark_mode_toggle()">Toggle site theme</button>
+
             <p>This is a test for text color</p>
             
             <p class="blue-text">This is a test</p>
 
             <p class="purple-text-test">This is a test</p>
-
-            <button onclick="dark_mode_toggle()">Toggle site theme</button>
         </div>
     </body>
 
