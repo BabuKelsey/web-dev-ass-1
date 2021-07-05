@@ -1,0 +1,20 @@
+.purple-text-test {
+    color: #9F00FF;
+}
+
+.blue-text {
+    color: #05bb7e;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body {
+    padding: 25px;
+    font-size: 18px;
+    background-color: #123435;
+    color: #f6ff7f;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
