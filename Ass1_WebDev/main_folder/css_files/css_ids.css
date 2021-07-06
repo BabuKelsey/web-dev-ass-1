@@ -19,12 +19,9 @@
 .div-test {
     height: 100vh;
     width: 100%;
-    background: #edf2fc;
+    /* background: #edf2fc; */
     font-family: sans-serif;
     position: relative;
-}
-
-divTest {
     font-size: 1em;
 }
 
@@ -110,10 +107,24 @@ nav ul li a:hover {
     transform: translateX(-50%);
 }
 
+/* .main-img {
+    bottom: -100px;
+} */
+
+#page-container {
+    position: relative;
+    /* min-height: 100vh; */
+}
+
+#content-wrap {
+    padding-bottom: 1em;
+}
+
 #footer {
-    position: absolute;
+    position: relative;
     bottom: 0px;
     width: 100%;
-    height: 2.5em;
+    height: 1em;
     text-align: center;
+    /* add a background container thing maybe*/
 }
