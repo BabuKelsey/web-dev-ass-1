@@ -46,8 +46,8 @@ body {
 
 .nav-item {
     list-style: none;
-    margin-left: auto;
-    /* margin-right: 2rem; */
+    /* margin-left: 100px; */
+    margin-right: 2rem;
 }
 
 .nav-item a {
@@ -59,6 +59,10 @@ body {
 .nav-item a:hover {
     color: var(--link-hover-color);
     transition: all 100ms ease-in;
+}
+
+ul li:first-child {
+    color: aquamarine;
 }
 
 /* .navbar-main a {
@@ -92,6 +96,7 @@ body {
     display: flex;
     /* justify-content: flex-end; */
     align-items: center;
+    /* float: right; */
 }
 
 .logo {
