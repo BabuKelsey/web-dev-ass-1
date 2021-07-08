@@ -1,42 +1,83 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Web dev testing folder</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store cart test</title>
+    <link rel="stylesheet" href="../css_files/style.css">
+    <script src="https://kit.fontawesome.com/d6496f6f20.js" crossorigin="anonymous"></script>
+</head>
 
-        <link href="../css_files/style.css" type="text/css" rel="stylesheet">
-    </head>
-
-    <body>
-        <div id="page-container">
-            <div id="main-content">
-
-                <div class="nav-bar">
-                    <!-- "nav-bar" to contain the whole navbar -->
-                    <nav>
-                        <!-- "navbar-main" is for setting the entire navbar -->
-                        <!-- <ul class="nav-logo">
-                            <img src="../images/logo.png" class="logo">
-                        </ul> -->
-
-                        <ul class="nav-list">
-                            <!-- "nav-item" is for items in the navbar -->
-                            <img src="../images/logo.png" class="logo">
-
-                            <!-- change the "index/home nav" to be next to the site logo -->
-                            <li class="nav-item"><a href="index.html">Home</a></li>
-                            <li class="nav-item"><a href="about.html">About</a></li>
-                            <li class="nav-item"><a href="featured_items.html">Featured</a></li>
-                            <li class="nav-item"><a href="item_categories.html">Categories</a></li>
-                            <li class="nav-item"><a href="contacts.html">Contact</a></li>
-                        </ul>
-                    </nav>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="site logo" class="logo">
                 </div>
+        
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="featured_items.html">Featured</a></li>
+                        <li><a href="item_categories.html">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
 
-                <h1>Welcome to Kelsey's shop</h1>
-            </div>            
+                <img src="../images/cart.png" alt="the cart" class="cart">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Kelsey's Shop</h1>
+                    <p>Welcome to my poopy shop xD</p>
+                    <a href="#" class="btn">&#9886 Explore &#9887</a>
+                </div>
+                <div class="col-2">
+                    <img src="../images/image1.png" alt="background image i think this is (to be removed)">
+                </div>
+            </div>
         </div>
-    </body>
+    </div>
 
-    <footer id="footer">This is a footer</footer>
+    <!-- Featured categories -->
+    <div class="categories">
+        <div class="small-container">
+            <!-- <h1>Featured items</h1> -->
+            <div class="row">
+                <div class="col-3">
+                    <img src="../images/category-1.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="../images/category-2.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="../images/category-3.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured products -->
+    <div class="small-container">
+        <h2>Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="../images/product-1.jpg">
+                <h4>Red Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
