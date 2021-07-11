@@ -334,6 +334,7 @@ h4 {
 .menu-icon {
     width: 1.5rem;
     margin-left: 20px;
+    display: none;
 }
 
 /* media query for menu */
@@ -345,17 +346,69 @@ h4 {
         left: 0;
         background: var(--bg-dark-color);
         width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
     }
-
     nav ul li {
         display: block;
         margin-right: 50px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
-
     nav ul li a {
         color: var(--link-color);
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* all products */
+
+.row-2 {
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+
+select {
+    border: 1px solid var(--link-hover-color);
+    padding: 5px;
+}
+
+select:focus {
+    outline: none;
+}
+
+.page-btn {
+    margin: 0 auto 80px;
+}
+
+.page-btn span {
+    display: inline-block;
+    border: 1px solid var(--link-hover-color);
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.page-btn span:hover {
+    background: var(--link-hover-color);
+}
+
+/* media query for < 600 screen size */
+
+@media only screen and (max-width: 600px) {
+    .row {
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4 {
+        flex-basis: 100%;
     }
 }
 
