@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products of this Shitty store</title>
+    <link rel="stylesheet" href="../css_files/style.css">
+    <script src="https://kit.fontawesome.com/d6496f6f20.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="site logo" class="logo">
+                </div>
+    
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="../images/cart.png" alt="the cart" class="cart">
+                <img src="../images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    </section>
+
+    <!-- cart items details -->
+    <section>
+        <div class="small-container cart-page">
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../images/buy-1.jpg">
+                            <div>
+                                <p>Red Shirt</p>
+                                <small>Price: $10.00</small>
+                                <br>
+                                <a href="#">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../images/buy-2.jpg">
+                            <div>
+                                <p>Shoes</p>
+                                <small>Price: $10.00</small>
+                                <br>
+                                <a href="#">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../images/buy-3.jpg">
+                            <div>
+                                <p>Pants</p>
+                                <small>Price: $10.00</small>
+                                <br>
+                                <a href="#">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>$10.00</td>
+                </tr>
+            </table>
+
+            <div class="total-price">
+                <table>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td>$30.00</td>
+                    </tr>
+                    <tr>
+                        <td>Tax</td>
+                        <td>$30.00</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>$30.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download App</h3>
+                        <p>Download for Andriod or iOS</p>
+                        <div class="app-logo">
+                            <img src="../images/play-store.png">
+                            <img src="../images/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="../images/logo-white.png">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, labore.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog</li>
+                            <li>Returns</li>
+                            <li>Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instgram</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr>
+                <p class="copyright">Copyright 2020 - Shitty Store</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- menu toggle script -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+
+</html>
