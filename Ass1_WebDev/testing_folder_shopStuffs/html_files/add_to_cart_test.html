@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_files/add_to_cart_test.css">
+    <script type="text/javascript" src="../js_files/add_to_cart_test.js"></script>
+    <title>Cart functionality test</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="card" id="item1">
+                <img src="../images/product-1.jpg" alt="Product image #1">
+            
+                <div class="title">Red Shirt</div>
+                <div>
+                    <label>SIZE: </label>
+                    <select>
+                        <option>30</option>
+                        <option>32</option>
+                        <option>34</option>
+                        <option>36</option>
+                    </select>
+                </div>
+                <button onclick="addToCart(item1)">Add to cart</button>
+            </div>
+            <div class="card" id="item2">
+                <img src="../images/product-2.jpg" alt="Product image #1">
+            
+                <div class="title">Shoes</div>
+                <div>
+                    <label>SIZE: </label>
+                    <select>
+                        <option>30</option>
+                        <option>32</option>
+                        <option>34</option>
+                        <option>36</option>
+                    </select>
+                </div>
+                <button onclick="addToCart(item2)">Add to cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="cart" id="cart">
+            <div class="title">CART</div><hr/>
+            <div id="title"></div>
+        </div>
+    </section>
+</body>
+</html>
