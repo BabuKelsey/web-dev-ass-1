@@ -1,34 +1,35 @@
 let carts = document.querySelectorAll('.add-cart');
+
 let products = [
     {
         name: 'Face 1',
         tag: 'face1',
         price: 10,
-        inCart: 0,
+        inCart: 0
     },
     {
         name: 'Face 2',
         tag: 'face2',
         price: 12,
-        inCart: 0,
+        inCart: 0
     },
     {
         name: 'Face 3',
         tag: 'face3',
         price: 14,
-        inCart: 0,
+        inCart: 0
     },
     {
         name: 'Face 4',
         tag: 'face4',
         price: 15,
-        inCart: 0,
+        inCart: 0
     },
 ];
 
 for (let i = 0; i < carts.length; i++) {
     carts[i].addEventListener('click', () => {
-        cartNumbers();
+        cartNumbers(products[i]);
     });
 }
 
@@ -40,7 +41,7 @@ function onLoadCartNumbers() {
     }
 }
 
-function cartNumbers() {
+function cartNumbers(product) {
     let productNumbers = localStorage.getItem('cartNumbers');
 
     productNumbers = parseInt(productNumbers);
@@ -52,6 +53,30 @@ function cartNumbers() {
         localStorage.setItem('cartNumbers', 1);
         document.querySelector('.cart span').textContent = 1;
     }
+
+    setItems(product);
+}
+
+function setItems(product) {
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+
+    if (cartItems != null) {
+        if (cartItems[product.tag] == undefined) {
+            cartItems = {
+                ...cartItems,
+                [product.tag]: product
+            }
+        }
+        cartItems[product.tag].inCart += 1;
+    } else {
+        product.inCart = 1;
+        cartItems = {
+            [product.tag]: product
+        }
+    }
+
+    localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 }
 
 onLoadCartNumbers();
