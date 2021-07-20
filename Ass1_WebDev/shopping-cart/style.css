@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
-    background-image: url("../images/anime_pic_1.png");
+    background-image: url('images/cover.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -18,13 +18,13 @@ header {
     position: absolute;
     z-index: 1;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
     height: 100%;
+    right: 0;
+    bottom: 0;
     padding: 0 !important;
     margin: 0 !important;
-    background-color: rgba(10, 10, 10, 0.3);
+    background-color: rgba(10,10,10,0.3);
 }
 
 nav {
@@ -53,14 +53,13 @@ nav li span {
 li a {
     padding: 5px;
     background-color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
+    text-decoration: none;;
 }
 
 .cart ion-icon {
-    vertical-align: bottom;
-    font-size: 20px;
-    padding-right: 5px;
+   vertical-align: bottom;
+   font-size: 20px;
+   padding-right: 5px;
 }
 
 .cart a {
@@ -71,13 +70,12 @@ li a {
 }
 
 .container,
-.products-container {
+.container-products {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* text-align: center; */
     margin-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 100px;;
 }
 
 .image {
@@ -87,19 +85,10 @@ li a {
     overflow: hidden;
 }
 
-.itemImg {
-    width: 15rem;
-    /* height: 10rem; */
-}
-
-.cartImg {
-    width: 100px;
-}
-
 .add-cart {
     position: absolute;
     width: 100%;
-    background-color: darkgray;
+    background-color: darkgrey;
     transition: all 0.3s ease-in-out;
     opacity: 0;
     cursor: pointer;
@@ -114,21 +103,20 @@ li a {
     opacity: 1;
     padding: 10px;
     text-decoration: none;
-    /* transform: translateX(-50%); */
 }
 
-/* ---------- cart page ---------- */
+/* ----------------- CART PAGE --------------- */
 
-.products-container {
+.container-products {
     max-width: 650px;
     justify-content: space-around;
     margin: 0 auto;
     margin-top: 50px;
 }
 
-.products-container ion-icon {
+.container-products ion-icon {
     font-size: 25px;
-    color: royalblue;
+    color: blue;
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
@@ -149,6 +137,7 @@ li a {
 
 .price {
     width: 15%;
+    border-bottom: 1px solid lightgray;
     display: flex;
     align-items: center;
 }
@@ -168,10 +157,61 @@ li a {
 }
 
 .product {
-    /* width: 45%; */
+    width: 45%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid lightgray;
+}
+
+.product ion-icon {
+    cursor: pointer;
+    
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products img {
+    width: 75px;
+}
+
+.basketTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.basketTotalTitle {
+    width: 30%;
+}
+
+.basketTotal {
+    width: 10%;
+}
+
+@media(max-width: 500px) {
+    nav h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;;
+    }
+
+    .sm-hide {
+        display: none;;
+    }
+
+    .products,
+    .product-header {
+        justify-content: center;
+    }
+
+    .basketTotalContainer {
+        padding-right: 8%;
+    }
 }

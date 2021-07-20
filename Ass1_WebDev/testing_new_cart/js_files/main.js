@@ -2,24 +2,28 @@ let carts = document.querySelectorAll('.add-cart');
 
 let products = [
     {
+        itemId: 0001,
         name: 'Face 1',
         tag: 'face1',
         price: 10,
         inCart: 0
     },
     {
+        itemId: 0002,
         name: 'Face 2',
         tag: 'face2',
         price: 12,
         inCart: 0
     },
     {
+        itemId: 0003,
         name: 'Face 3',
         tag: 'face3',
         price: 14,
         inCart: 0
     },
     {
+        itemId: 0004,
         name: 'Face 4',
         tag: 'face4',
         price: 15,
@@ -91,4 +95,30 @@ function totalCost(product) {
     }
 }
 
+function displayCart() {
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector('.products');
+
+    if (cartItems && productContainer) {
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+                <div class="product">
+                    <ion-icon name="close-circle"></ion-icon>
+                    <img src="../images/${item.tag}.png" class="cartImg">
+                    <span>${item.name}</span>
+                </div>
+                <div class="price">$${item.price}</div>
+                <div class="quantity">
+                    <ion-icon class="decrease" name="caret-back-circle"></ion-icon>
+                    <span>${item.inCart}</span>
+                    <ion-icon name="caret-forward-circle"></ion-icon>
+                </div>
+            `
+        });
+    }
+}
+
 onLoadCartNumbers();
+displayCart();
