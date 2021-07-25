@@ -31,37 +31,6 @@ let products = [
     },
 ];
 
-// let products = [
-//     {
-//         itemId: 0001,
-//         name: 'Face 1',
-//         tag: 'face1',
-//         price: 10,
-//         inCart: 0
-//     },
-//     {
-//         itemId: 0002,
-//         name: 'Face 2',
-//         tag: 'face2',
-//         price: 12,
-//         inCart: 0
-//     },
-//     {
-//         itemId: 0003,
-//         name: 'Face 3',
-//         tag: 'face3',
-//         price: 14,
-//         inCart: 0
-//     },
-//     {
-//         itemId: 0004,
-//         name: 'Face 4',
-//         tag: 'face4',
-//         price: 15,
-//         inCart: 0
-//     },
-// ];
-
 for(let i=0; i< carts.length; i++) {
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i]);
@@ -100,8 +69,8 @@ function cartNumbers(product, action) {
 function setItems(product) {
     // let productNumbers = localStorage.getItem('cartNumbers');
     // productNumbers = parseInt(productNumbers);
-    let cartItems = localStorage.getItem('productsInCart');
-    cartItems = JSON.parse(cartItems);
+    let cartItems = JSON.parse(localStorage.getItem('productsInCart'));
+    // cartItems = JSON.parse(cartItems);
 
     if(cartItems != null) {
         let currentProduct = product.tag;
@@ -244,6 +213,11 @@ function deleteButtons() {
         })
     }
 }
+
+function onPage() {
+
+}
+
 
 onLoadCartNumbers();
 displayCart();
