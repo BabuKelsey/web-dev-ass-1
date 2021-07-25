@@ -2,28 +2,28 @@ let carts = document.querySelectorAll('.add-cart');
 
 let products = [
     {
-        itemId: 0001,
+        itemId: 1,
         name: 'Face 1',
         tag: 'face1',
         price: 10,
         inCart: 0
     },
     {
-        itemId: 0002,
+        itemId: 2,
         name: 'Face 2',
         tag: 'face2',
         price: 12,
         inCart: 0
     },
     {
-        itemId: 0003,
+        itemId: 3,
         name: 'Face 3',
         tag: 'face3',
         price: 14,
         inCart: 0
     },
     {
-        itemId: 0004,
+        itemId: 4,
         name: 'Face 4',
         tag: 'face4',
         price: 15,
