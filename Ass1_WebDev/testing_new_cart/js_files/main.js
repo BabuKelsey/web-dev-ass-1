@@ -31,6 +31,12 @@ let products = [
     },
 ];
 
+// var result = products.itemId.map(function(productItemId) {
+//     return productItemId.itemId;
+// });
+
+// console.log('result');
+
 for(let i=0; i< carts.length; i++) {
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i]);
@@ -71,6 +77,7 @@ function setItems(product) {
     // productNumbers = parseInt(productNumbers);
     let cartItems = JSON.parse(localStorage.getItem('productsInCart'));
     // cartItems = JSON.parse(cartItems);
+    // console.log('productsInCart');
 
     if(cartItems != null) {
         let currentProduct = product.tag;
@@ -100,6 +107,7 @@ function totalCost( product, action ) {
         cart = parseInt(cart);
 
         localStorage.setItem("totalCost", cart - product.price);
+        // console.log('totalCost function ' + cart + ' & ' + product.price);
     } else if(cart != null) {
         
         cart = parseInt(cart);
